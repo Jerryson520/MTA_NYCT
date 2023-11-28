@@ -2,9 +2,30 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "MTA_NYCT",
+    "title": "Analysis of the NYCT Express Bus Capacity",
     "section": "",
     "text": "1 Introduction"
+  },
+  {
+    "objectID": "index.html#context-of-data-set",
+    "href": "index.html#context-of-data-set",
+    "title": "Analysis of the NYCT Express Bus Capacity",
+    "section": "1.1 Context of data set:",
+    "text": "1.1 Context of data set:\nThe data set chosen for our research project stems from public transportation’s critical role in urban areas, especially in a bustling metropolis like New York City. It offers a valuable resource for analyzing public transportation usage, specifically in understanding the context of express bus services in New York City. Express buses are:\n\nA crucial component of this network.\nOffering faster, more direct services than local buses.\nTypically connecting outer boroughs to central areas like Manhattan."
+  },
+  {
+    "objectID": "index.html#why-we-chose-this-data-set",
+    "href": "index.html#why-we-chose-this-data-set",
+    "title": "Analysis of the NYCT Express Bus Capacity",
+    "section": "1.2 Why we chose this data set?",
+    "text": "1.2 Why we chose this data set?\nThe data set provides us with the load percentage for each express bus route at its maximum load point (the bus stop with the highest number of passengers on the bus) by direction, hour, and day type (weekday, weekends, and holidays), aggregated by week. By studying these buses’ capacity and load percentages, we can gain a deeper understanding of their utilization and the challenges they face, which is vital for enhancing urban mobility in one of the world’s most dynamic cities."
+  },
+  {
+    "objectID": "index.html#questions-we-hope-to-answer",
+    "href": "index.html#questions-we-hope-to-answer",
+    "title": "Analysis of the NYCT Express Bus Capacity",
+    "section": "1.3 Questions we hope to answer:",
+    "text": "1.3 Questions we hope to answer:\nStudying this data set can yield insights into several key questions:\nPassenger Load Analysis: We can identify the most crowded bus stops, routes, and boroughs by examining the variation in the load percentage overtime. This helps in understanding passenger demand and the efficiency of the current bus network in meeting this demand.\nTime-Based Trends: Analyzing load percentages by hour and day type (weekdays, weekends, holidays) can reveal temporal patterns in bus usage. This is crucial for understanding peak hours, which can assist in optimizing bus schedules and frequencies.\nRoute Optimization: Data on the busiest routes and times can guide decisions on where to allocate more resources or introduce larger buses, potentially improving service quality and reducing overcrowding.\nPolicy and Planning Implications: The findings from this analysis can inform city planners and policymakers in making data-driven decisions about public transportation infrastructure and services in the long-run."
   },
   {
     "objectID": "data.html#description",
