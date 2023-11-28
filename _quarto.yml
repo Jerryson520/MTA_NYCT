@@ -6,10 +6,10 @@ execute:
   echo: true
 
 book:
-  title: "MTA_NYCT"
+  title: "Analysis of the NYCT Express Bus Capacity"
   author:
     - Yuwen Sun (ys3748)
-    - Shumail Sajjad (UNI2)
+    - Shumail Sajjad (ss6972)
   repo-url: https://github.com/Jerryson520/MTA_NYCT.git
   date: today
   page-footer:

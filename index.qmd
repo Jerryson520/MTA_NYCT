@@ -1,1 +1,25 @@
 # Introduction
+
+## Context of data set:
+
+The data set chosen for our research project stems from public transportation's critical role in urban areas, especially in a bustling metropolis like New York City. It offers a valuable resource for analyzing public transportation usage, specifically in understanding the context of express bus services in New York City. Express buses are:
+
+i)  A crucial component of this network.
+ii) Offering faster, more direct services than local buses.
+iii) Typically connecting outer boroughs to central areas like Manhattan.
+
+## Why we chose this data set?
+
+The data set provides us with the load percentage for each express bus route at its maximum load point (the bus stop with the highest number of passengers on the bus) by direction, hour, and day type (weekday, weekends, and holidays), aggregated by week. By studying these buses' capacity and load percentages, we can gain a deeper understanding of their utilization and the challenges they face, which is vital for enhancing urban mobility in one of the world's most dynamic cities.
+
+## Questions we hope to answer:
+
+Studying this data set can yield insights into several key questions:
+
+**Passenger Load Analysis**: We can identify the most crowded bus stops, routes, and boroughs by examining the variation in the load percentage overtime. This helps in understanding passenger demand and the efficiency of the current bus network in meeting this demand.
+
+**Time-Based Trends**: Analyzing load percentages by hour and day type (weekdays, weekends, holidays) can reveal temporal patterns in bus usage. This is crucial for understanding peak hours, which can assist in optimizing bus schedules and frequencies.
+
+**Route Optimization**: Data on the busiest routes and times can guide decisions on where to allocate more resources or introduce larger buses, potentially improving service quality and reducing overcrowding.
+
+**Policy and Planning Implications**: The findings from this analysis can inform city planners and policymakers in making data-driven decisions about public transportation infrastructure and services in the long-run.
