@@ -12,4 +12,118 @@ As of now, no significant issues have been identified with the data set. The pri
 
 ## Research Plan
 
+How we explain the questions we put forward in introduction
+
+### Passenger Load Analysis:
+
+-   **Data Utilization**: The dataset provides load percentages for each express bus route at their maximum load points. This can be used to identify the most crowded bus stops, routes, and boroughs.
+-   **Methodology**: By examining the variation in load percentages over time, you can analyze trends in passenger demand. Comparisons can be made across different routes and stops to determine which are consistently overburdened.
+-   **Outcome**: This analysis will reveal the areas where the bus network is potentially strained, indicating where improvements or adjustments are needed.
+
+### Time-Based Trends:
+
+-   **Data Utilization**: Load percentages are broken down by hour and day type (weekday, weekends, holidays). This allows for a granular analysis of usage patterns.
+-   **Methodology**: By plotting these data points, you can identify peak and off-peak usage times. This information can be used to examine how bus utilization fluctuates throughout the day and on different types of days.
+-   **Outcome**: The findings will inform recommendations for optimizing bus schedules and frequencies, ensuring that service availability aligns with passenger demand.
+
+### Route Optimization:
+
+-   **Data Utilization**: Aggregated weekly data on load percentages by route and stop will highlight which routes are consistently busy.
+-   **Methodology**: Analyzing this data can help determine where resources might be insufficient. You can identify specific times and locations that require additional buses or larger capacity vehicles.
+-   **Outcome**: The aim is to propose specific route adjustments and enhancements that can improve service quality and reduce overcrowding.
+
+### Policy and Planning Implications:
+
+-   **Data Utilization**: The comprehensive nature of the dataset provides a detailed picture of how the express bus network is currently serving the city.
+-   **Methodology**: By synthesizing the insights from load analysis, time-based trends, and route optimization, you can make informed recommendations for long-term planning and policy decisions.
+-   **Outcome**: The analysis will offer valuable input for city planners and policymakers, guiding them in making decisions about public transportation infrastructure, service improvements, and resource allocation.
+
+In summary, the dataset's detailed breakdown of load percentages by route, stop, hour, and day type is instrumental in understanding the dynamics of express bus service utilization in New York City. By meticulously analyzing this data, you can answer critical questions about passenger load, time-based usage trends, route optimization needs, and broader policy implications. This approach will not only address the specific research questions but also contribute to the broader goal of enhancing urban mobility in New York City.
+
 ## Missing value analysis
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig.cap: "Caption for your figure."
+
+# Load the necessary libraries
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+library(reshape2)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+path = "~/MTA_NYCT/MTA_NYCT_Express_Bus_Capacity__Beginning_2023.csv"
+bus_load = read.csv(path)
+```
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig.cap: "Missing value analysis figure 1."
+
+# Create a logical matrix where TRUE indicates missing values
+missing_data_matrix <- is.na(bus_load)
+
+# Convert the logical matrix to a data frame
+missing_data_df <- as.data.frame(missing_data_matrix)
+
+# Add a row identifier
+missing_data_df$Row <- seq_len(nrow(missing_data_df))
+
+# Use 'gather' to convert this data frame to a long format suitable for ggplot
+missing_data_long <- missing_data_df %>%
+  gather(key = "Column", value = "Missing", -Row)
+
+# Create the heatmap
+ggplot(missing_data_long, aes(x = Column, y = Row, fill = Missing)) +
+  geom_tile() +
+  scale_fill_manual(values = c("TRUE" = "grey", "FALSE" = "red")) +
+  labs(title = "Heatmap of Missing Data", x = "Column", y = "Row ID") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
+        axis.title.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.text.y=element_blank())
+```
+
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig.cap: "Missing value analysis figure 2."
+
+
+# Calculate the count of non-missing and missing values for each column
+missing_values_counts <- bus_load %>%
+  summarise_all(~ sum(is.na(.))) %>%
+  gather(key = "Column", value = "Missing") %>%
+  mutate(NonMissing = n() - Missing)
+
+# Plot the stacked bar chart
+ggplot(missing_values_counts, aes(x = Column, y = NonMissing, fill = "Non-missing")) +
+  geom_bar(stat = "identity") +
+  geom_bar(aes(y = Missing, fill = "Missing"), stat = "identity") +
+  scale_fill_manual(values = c("Non-missing" = "blue", "Missing" = "red")) +
+  theme_minimal() +
+  labs(x = "Column", y = "Count", fill = "Value Status") +
+  coord_flip()  # Optional: Flip the axes to make the chart horizontal
+```
+
+### Comment:
+The 1st figure, titled "Heatmap of Missing Data", shows a heatmap where the entire area is filled with a single color, indicating the absence of missing values across all columns of the dataset. Each column is represented on the x-axis, and the uniform color suggests that for every column in the dataset, there are no missing (NA) values.
+
+The 2nd figure, titled "Missing value analysis figure 2", displays a stacked bar chart with each bar representing a column from the dataset. The bars are filled with a single color, indicating non-missing values. The absence of a second color in each bar which would have represented missing values implies that there are no missing values in any of the columns of the dataset. The count on the y-axis likely represents the total number of non-missing observations for each column.
+
+Both figures effectively communicate that the dataset is complete with no missing observations for any of the variables presented. This is beneficial for data analysis as it suggests that there may not be a need for imputation strategies, and statistical analyses can proceed without the complication of handling missing data.
