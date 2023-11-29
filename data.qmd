@@ -1,5 +1,15 @@
 # Data
 
-## Description
+## Technical Description
+
+For the proposed project, we will be utilizing data from [data.ny.gov](https://data.ny.gov/), focusing on the Metropolitan Transportation Authority (MTA) NYC Transport's historical express bus service data. This data offers insights into the load percentages of bus routes across different directions, boroughs, and times within New York state.
+
+The data for our research is primarily collected by the Metropolitan Transportation Authority (MTA). It is gathered systematically from the operational systems of the MTA, providing a comprehensive overview of express bus load dynamics. The data set spans from January 2023 to the latest update on October 16, 2023. It is updated monthly and encompasses various dimensions, including load percentages, bus routes, boroughs, and time of the day.
+
+The data set is reliable due to its comprehensive nature (eight columns) and a large sample size (49,300 data points), which facilitates robust inferences on load trends. We have imported the data as a CSV file, given the compatibility and ease of use of CSV datasets in the R programming environment.
+
+As of now, no significant issues have been identified with the data set. The primary data source can be accessed at [MTA NYC Transport's Historical Express Bus Service Data](https://data.ny.gov/en/Transportation/MTA-NYCT-Express-Bus-Capacity-Beginning-2023/4tpr-3bvc) on [data.ny.gov](https://data.ny.gov/). In case of updates or revisions, refer to this specific data set page on the website for the most current information.
+
+## Research Plan
 
 ## Missing value analysis
