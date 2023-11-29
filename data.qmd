@@ -1,5 +1,39 @@
+---
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
 # Data
 
-## Description
+## Technical Description:
+
+For the proposed project, we will be utilizing data from [data.ny.gov](https://data.ny.gov/), focusing primarily on the Metropolitan Transportation Authority (MTA) NYC Transport's historical express bus service data.
+This data offers insights into the load percentages of bus routes across different directions, boroughs, and times within New York City.
+
+**Data Collection and Source:** 
+- **Source:** The dataset is sourced from data.ny.gov, a public platform for data collected by government agencies in New York City.
+- **Collection Agency:** The data is collected by the Metropolitan Transportation Authority (MTA).
+- **Collection Method:** It is gathered systematically from the operational systems of the MTA, providing a comprehensive overview of express bus load dynamics.
+
+**Data Description:** - **Time Span:** The dataset covers data from January 2023 to the latest update on October 16, 2023.
+- **Frequency of Updates:** The data is updated monthly.
+- **Dimensions:** The dataset encompasses various dimensions, including load percentages, bus routes, boroughs, and time of the day.
+- **Format:** The data is available in CSV format.
+- **Size:** It consists of approximately 49,300 data points and has eight columns (discussed later).
+
+**Data Reliability:** - The dataset is considered reliable due to its comprehensive nature and the large sample size, which facilitates robust inferences on load trends.
+
+**Importing Data:** - The dataset was chosen to be imported as a CSV file, given the compatibility and ease of use of CSV datasets in the R programming environment.
+
+**Documentation:** - The primary data source can be accessed at [MTA NYC Transport's Historical Express Bus Service Data on data.ny.gov](https://data.ny.gov/).
+- In case of updates or revisions, refer to the specific dataset page on the website for the most current information.
+
+**Data Issues/Problems:** - As of now, no significant issues have been identified with the dataset.
+However, continuous monitoring for any updates or discrepancies is necessary to maintain data integrity.
+
+This concise overview details the chosen dataset's source, collection method, format, and reliability, along with the strategy for data importation and documentation.
+
+## Research Plan
 
 ## Missing value analysis
