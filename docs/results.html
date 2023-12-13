@@ -138,7 +138,33 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#passenger-loadtrips-analysis" id="toc-passenger-loadtrips-analysis" class="nav-link active" data-scroll-target="#passenger-loadtrips-analysis"><span class="header-section-number">3.1</span> <strong>Passenger Load/Trips Analysis</strong></a>
+  <ul class="collapse">
+  <li><a href="#boxplot-load-percentage-by-direction" id="toc-boxplot-load-percentage-by-direction" class="nav-link" data-scroll-target="#boxplot-load-percentage-by-direction"><span class="header-section-number">3.1.1</span> Boxplot: Load Percentage by Direction</a></li>
+  <li><a href="#horizontal-barchart-avg.-load-percentage-per-borough" id="toc-horizontal-barchart-avg.-load-percentage-per-borough" class="nav-link" data-scroll-target="#horizontal-barchart-avg.-load-percentage-per-borough"><span class="header-section-number">3.1.2</span> Horizontal barchart: Avg. Load Percentage per Borough</a></li>
+  <li><a href="#horizontal-barchart-avg.-trips-with-apc-per-borough" id="toc-horizontal-barchart-avg.-trips-with-apc-per-borough" class="nav-link" data-scroll-target="#horizontal-barchart-avg.-trips-with-apc-per-borough"><span class="header-section-number">3.1.3</span> Horizontal barchart: Avg. Trips with APC per Borough</a></li>
+  <li><a href="#cleveland-plot-avg.-load-percentage-per-route" id="toc-cleveland-plot-avg.-load-percentage-per-route" class="nav-link" data-scroll-target="#cleveland-plot-avg.-load-percentage-per-route"><span class="header-section-number">3.1.4</span> Cleveland plot: Avg. Load Percentage per Route</a></li>
+  </ul></li>
+  <li><a href="#time-based-trends" id="toc-time-based-trends" class="nav-link" data-scroll-target="#time-based-trends"><span class="header-section-number">3.2</span> <strong>Time-based Trends</strong></a>
+  <ul class="collapse">
+  <li><a href="#line-plot-avg.-load-percentage-of-nyc-bus-by-hour" id="toc-line-plot-avg.-load-percentage-of-nyc-bus-by-hour" class="nav-link" data-scroll-target="#line-plot-avg.-load-percentage-of-nyc-bus-by-hour"><span class="header-section-number">3.2.1</span> Line plot: Avg. Load Percentage of NYC Bus by Hour</a></li>
+  <li><a href="#barchart-avg.-trips-with-apc-of-nyc-bus-by-hour" id="toc-barchart-avg.-trips-with-apc-of-nyc-bus-by-hour" class="nav-link" data-scroll-target="#barchart-avg.-trips-with-apc-of-nyc-bus-by-hour"><span class="header-section-number">3.2.2</span> Barchart: Avg. Trips with APC of NYC Bus by Hour</a></li>
+  <li><a href="#ridgeline-plot-load-percentage-distribution-by-day-type" id="toc-ridgeline-plot-load-percentage-distribution-by-day-type" class="nav-link" data-scroll-target="#ridgeline-plot-load-percentage-distribution-by-day-type"><span class="header-section-number">3.2.3</span> Ridgeline plot: Load Percentage Distribution by Day Type</a></li>
+  <li><a href="#ridgeline-plot-trip-with-apc-distribution-by-day-type" id="toc-ridgeline-plot-trip-with-apc-distribution-by-day-type" class="nav-link" data-scroll-target="#ridgeline-plot-trip-with-apc-distribution-by-day-type"><span class="header-section-number">3.2.4</span> Ridgeline plot: Trip with APC Distribution by Day Type</a></li>
+  </ul></li>
+  <li><a href="#multiple-variable-interactions" id="toc-multiple-variable-interactions" class="nav-link" data-scroll-target="#multiple-variable-interactions"><span class="header-section-number">3.3</span> <strong>Multiple variable Interactions</strong></a>
+  <ul class="collapse">
+  <li><a href="#barcharts-by-borough-avg.-load-percentage-with-respect-to-houreach-borough" id="toc-barcharts-by-borough-avg.-load-percentage-with-respect-to-houreach-borough" class="nav-link" data-scroll-target="#barcharts-by-borough-avg.-load-percentage-with-respect-to-houreach-borough"><span class="header-section-number">3.3.1</span> Barcharts by Borough: Avg. Load Percentage with respect to Hour(Each Borough)</a></li>
+  <li><a href="#scatterplot-correlation-between-load-percentage-and-trips" id="toc-scatterplot-correlation-between-load-percentage-and-trips" class="nav-link" data-scroll-target="#scatterplot-correlation-between-load-percentage-and-trips"><span class="header-section-number">3.3.2</span> Scatterplot: Correlation between Load Percentage and Trips</a></li>
+  <li><a href="#stacked-bar-chart-direction-composition-of-each-borough" id="toc-stacked-bar-chart-direction-composition-of-each-borough" class="nav-link" data-scroll-target="#stacked-bar-chart-direction-composition-of-each-borough"><span class="header-section-number">3.3.3</span> Stacked bar chart: Direction composition of each borough</a></li>
+  </ul></li>
+  <li><a href="#non-technical-summary" id="toc-non-technical-summary" class="nav-link" data-scroll-target="#non-technical-summary"><span class="header-section-number">3.4</span> <strong>Non-technical summary</strong>:</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Jerryson520/MTA_NYCT.git/edit/main/results.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Jerryson520/MTA_NYCT.git/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -160,8 +186,175 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="passenger-loadtrips-analysis" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="passenger-loadtrips-analysis"><span class="header-section-number">3.1</span> <strong>Passenger Load/Trips Analysis</strong></h2>
+<section id="boxplot-load-percentage-by-direction" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="boxplot-load-percentage-by-direction"><span class="header-section-number">3.1.1</span> Boxplot: Load Percentage by Direction</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="results_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="comment" class="level4" data-number="3.1.1.1">
+<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="comment"><span class="header-section-number">3.1.1.1</span> <strong>Comment</strong>:</h4>
+<p><strong>Median Load Percentage</strong>: The median load percentage seems relatively different. NB and SB are the first 2 largest Load Percentage while WB and EB are 2 smalless, Which indicates North and South may stand more passengers while the other 2 direction have lower utilization.</p>
+<p><strong>Outliers</strong>: All directions seems a lot of outliers, which are not taken into calculation consideration, I think we could further explore those and remove potential outliers which may influence our results.</p>
+<p><strong>Variation</strong>: By seeing the interquantile of those directions, we can see that SB direction have more variation with respect to the load percentage, which indicates south direction should be explored further.</p>
+</section>
+</section>
+<section id="horizontal-barchart-avg.-load-percentage-per-borough" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="horizontal-barchart-avg.-load-percentage-per-borough"><span class="header-section-number">3.1.2</span> Horizontal barchart: Avg. Load Percentage per Borough</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="results_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="comment-1" class="level4" data-number="3.1.2.1">
+<h4 data-number="3.1.2.1" class="anchored" data-anchor-id="comment-1"><span class="header-section-number">3.1.2.1</span> <strong>Comment</strong>:</h4>
+<p><strong>Average Load</strong>: Staten Island shows the highest average load percentage. This could indicate a higher utilization of the transportation system, or possibly fewer transportation options leading to more crowded buses or trains.</p>
+</section>
+</section>
+<section id="horizontal-barchart-avg.-trips-with-apc-per-borough" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="horizontal-barchart-avg.-trips-with-apc-per-borough"><span class="header-section-number">3.1.3</span> Horizontal barchart: Avg. Trips with APC per Borough</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="results_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="comment-2" class="level4" data-number="3.1.3.1">
+<h4 data-number="3.1.3.1" class="anchored" data-anchor-id="comment-2"><span class="header-section-number">3.1.3.1</span> <strong>Comment</strong>:</h4>
+<p><strong>Average Trip</strong>: Staten Island stands out with a significantly higher average number of trips. This could indicate a higher frequency of trips or that fewer routes are being used more frequently. Therefore, we should combine with Average load to see it’s the bad utilization or we should actually increase more routes.</p>
+</section>
+</section>
+<section id="cleveland-plot-avg.-load-percentage-per-route" class="level3" data-number="3.1.4">
+<h3 data-number="3.1.4" class="anchored" data-anchor-id="cleveland-plot-avg.-load-percentage-per-route"><span class="header-section-number">3.1.4</span> Cleveland plot: Avg. Load Percentage per Route</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="results_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="480"></p>
+</div>
+</div>
+<section id="comment-3" class="level4" data-number="3.1.4.1">
+<h4 data-number="3.1.4.1" class="anchored" data-anchor-id="comment-3"><span class="header-section-number">3.1.4.1</span> <strong>Comment</strong>:</h4>
+<p><strong>Route Load Variation</strong>: There is a wide variation in the average load percentages across different routes. Some routes have a low average load, while others are approaching 50%, which indicates differences in route popularity, capacity, or possibly the time of day the data was collected.</p>
+<p><strong>Comparison Across Boroughs</strong>: It appears that Staten Island has several routes with higher load percentages, while routes in Queens have a lower average load. This could reflect differences in transportation needs or service levels across boroughs.</p>
+</section>
+</section>
+</section>
+<section id="time-based-trends" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="time-based-trends"><span class="header-section-number">3.2</span> <strong>Time-based Trends</strong></h2>
+<section id="line-plot-avg.-load-percentage-of-nyc-bus-by-hour" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="line-plot-avg.-load-percentage-of-nyc-bus-by-hour"><span class="header-section-number">3.2.1</span> Line plot: Avg. Load Percentage of NYC Bus by Hour</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="results_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="comment-4" class="level4" data-number="3.2.1.1">
+<h4 data-number="3.2.1.1" class="anchored" data-anchor-id="comment-4"><span class="header-section-number">3.2.1.1</span> <strong>Comment</strong>:</h4>
+<p><strong>Peak Times</strong>: There is a clear peak in average load percentage around the 8th hour marked as the highest load at 48%, and another small peak around 16-17th hour. This likely corresponds to morning rush hour, a common time for people to commute to work or school, and the night rush hour, a common time for going home after work.</p>
+<p><strong>Lowest Load</strong>: The graph points out the lowest load percentage at 18%, which occurs around the 4th hour, likely in the very early morning when the least number of people are traveling.</p>
+<p><strong>Nighttime Load</strong>: There is an uptick in load percentage later in the evening, after the 20th hour, which could correspond to people returning home from late shifts or social activities.</p>
+</section>
+</section>
+<section id="barchart-avg.-trips-with-apc-of-nyc-bus-by-hour" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="barchart-avg.-trips-with-apc-of-nyc-bus-by-hour"><span class="header-section-number">3.2.2</span> Barchart: Avg. Trips with APC of NYC Bus by Hour</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="results_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="comment-5" class="level4" data-number="3.2.2.1">
+<h4 data-number="3.2.2.1" class="anchored" data-anchor-id="comment-5"><span class="header-section-number">3.2.2.1</span> <strong>Comment</strong>:</h4>
+<p><strong>Peak Hours</strong>: The chart shows distinct peaks in the number of trips during certain hours of the day. The most prominent peak appears to be in the morning hours, around 8 AM, suggesting a morning rush hour with the highest average number of trips. There’s another less pronounced peak in the late afternoon or early evening, possibly indicating an evening rush hour.</p>
+<p><strong>Off-Peak Variation</strong>: Outside of the peak hours, the number of trips decreases but fluctuates throughout the day. Midday hours show a moderate level of trips, which could be due to people traveling for non-work related reasons or staggered work schedules.</p>
+<p><strong>Nighttime Service</strong>: There’s a noticeable drop in the average number of trips late at night, reaching the lowest point in the early morning hours around 4 AM to 5 AM, which is expected as this is typically outside of standard commuting times.</p>
+</section>
+</section>
+<section id="ridgeline-plot-load-percentage-distribution-by-day-type" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="ridgeline-plot-load-percentage-distribution-by-day-type"><span class="header-section-number">3.2.3</span> Ridgeline plot: Load Percentage Distribution by Day Type</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="results_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="comment-6" class="level4" data-number="3.2.3.1">
+<h4 data-number="3.2.3.1" class="anchored" data-anchor-id="comment-6"><span class="header-section-number">3.2.3.1</span> <strong>Comment</strong>:</h4>
+<p><strong>Distribution Shape</strong>: The distribution of load percentages on weekdays has a wider spread than on weekends, suggesting there is more variation in bus load percentages during weekdays.</p>
+<p><strong>Peaks and Load</strong>: There appear to be multiple peaks for both weekdays and weekends. This could indicate that there are specific times during the day when buses are consistently more or less loaded. The highest peak on weekdays suggests a time when buses are most consistently at a similar load percentage, possibly during rush hours.</p>
+<p><strong>Weekday vs.&nbsp;Weekend Trends</strong>: The weekday distribution has a higher peak, which might indicate a more consistent pattern of high load percentages, likely associated with commuter traffic. The weekend distribution is broader with a less pronounced peak, suggesting a more varied load percentage, which could be due to a more irregular or leisure-based travel pattern.</p>
+<p><strong>Bus Utilization</strong>: The graph could suggest that buses are more heavily utilized during weekdays as compared to weekends, which would align with typical workweek patterns.</p>
+</section>
+</section>
+<section id="ridgeline-plot-trip-with-apc-distribution-by-day-type" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="ridgeline-plot-trip-with-apc-distribution-by-day-type"><span class="header-section-number">3.2.4</span> Ridgeline plot: Trip with APC Distribution by Day Type</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="results_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="comment-7" class="level4" data-number="3.2.4.1">
+<h4 data-number="3.2.4.1" class="anchored" data-anchor-id="comment-7"><span class="header-section-number">3.2.4.1</span> <strong>Comment</strong>:</h4>
+<p><strong>Weekend Peaks</strong>: The distribution for weekends has pronounced peaks, especially the very sharp peak at the lower end of the x-axis, indicating that there are many instances of a specific, lower number of trips (possibly single or very few trips on certain routes). This suggests that there’s less variability in the number of trips on weekends, with certain trip counts being far more common than others.</p>
+<p><strong>Weekday Distribution</strong>: The weekday distribution is smoother and more spread out, which indicates a greater variability in trip counts. This could be due to a more uniform distribution of commuter travel spread throughout the workday.</p>
+<p><strong>Use of Logarithmic Scale</strong>: By using a logarithmic scale (log2), the graph allows for easier visualization and comparison of data across a wide range of values. It’s especially useful when dealing with exponential growth or large disparities in data.</p>
+<p><strong>Low Trip Counts</strong>: The first peak in the weekend distribution suggests that the lowest trip counts are more common on weekends than on weekdays. This could be due to reduced service schedules or lower demand.</p>
+</section>
+</section>
+</section>
+<section id="multiple-variable-interactions" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="multiple-variable-interactions"><span class="header-section-number">3.3</span> <strong>Multiple variable Interactions</strong></h2>
+<section id="barcharts-by-borough-avg.-load-percentage-with-respect-to-houreach-borough" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="barcharts-by-borough-avg.-load-percentage-with-respect-to-houreach-borough"><span class="header-section-number">3.3.1</span> Barcharts by Borough: Avg. Load Percentage with respect to Hour(Each Borough)</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="results_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="comment-8" class="level4" data-number="3.3.1.1">
+<h4 data-number="3.3.1.1" class="anchored" data-anchor-id="comment-8"><span class="header-section-number">3.3.1.1</span> <strong>Comment</strong>:</h4>
+<p><strong>Variability</strong>: Each borough exhibits variability in load percentages throughout the day. This could be reflective of different travel patterns, with peaks likely corresponding to rush hours.</p>
+<p><strong>Peak Times</strong>: Bronx: Shows pronounced peaks, which could suggest rush hours are more pronounced in the Bronx, with higher bus usage during these times.</p>
+<p><strong>Brooklyn</strong>: Exhibits a more even distribution with less pronounced peaks, possibly indicating a more steady usage of buses throughout the day.</p>
+<p><strong>Queens</strong>: Similar to the Bronx, there are distinct peaks that may correspond to rush hours.</p>
+<p><strong>Staten Island</strong>: Has a more varied pattern with multiple peaks, suggesting several busy periods throughout the day.</p>
+</section>
+</section>
+<section id="scatterplot-correlation-between-load-percentage-and-trips" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="scatterplot-correlation-between-load-percentage-and-trips"><span class="header-section-number">3.3.2</span> Scatterplot: Correlation between Load Percentage and Trips</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="results_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="comment-9" class="level4" data-number="3.3.2.1">
+<h4 data-number="3.3.2.1" class="anchored" data-anchor-id="comment-9"><span class="header-section-number">3.3.2.1</span> <strong>Comment</strong>:</h4>
+<p><strong>Data Distribution</strong>: A scatter plot with a lot of data points clustered at the lower end of the load percentage axis might suggest that most bus trips have a low to moderate load percentage. But the correlation relationship is not so apparent.</p>
+<p><strong>Outliers</strong>: There are points scattered more widely along the y-axis at higher load percentages, these could be considered outliers indicating occasional trips with significantly higher load percentages.</p>
+</section>
+</section>
+<section id="stacked-bar-chart-direction-composition-of-each-borough" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="stacked-bar-chart-direction-composition-of-each-borough"><span class="header-section-number">3.3.3</span> Stacked bar chart: Direction composition of each borough</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="results_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="comment-10" class="level4" data-number="3.3.3.1">
+<h4 data-number="3.3.3.1" class="anchored" data-anchor-id="comment-10"><span class="header-section-number">3.3.3.1</span> <strong>Comment</strong>:</h4>
+<p><strong>Graph distribution</strong>: From the graph, we know that only Brooklyn has 4 directions of routes, while Bronx and Staten Island have only North and South direction. Queens has only East and West. According to previous graphs, it indicates that North and South have higher load percentages. This is fit for that Bronx and Staten Island have higher load percentage while Queens has lower percentage.</p>
+</section>
+</section>
+</section>
+<section id="non-technical-summary" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="non-technical-summary"><span class="header-section-number">3.4</span> <strong>Non-technical summary</strong>:</h2>
+<p><strong>Busyness by Time and Place</strong>: Some graphs showed how busy the buses are at different times of the day in various boroughs. For example, there are times in the morning and evening when the buses are particularly full, likely when people are going to or from work.</p>
+<p><strong>Direction Matters</strong>: Other charts indicated that in some boroughs, buses going in certain directions are busier than others. This might tell us where more people work or live, or maybe where popular destinations are.</p>
+<p><strong>Weekdays vs.&nbsp;Weekends</strong>: There’s also a difference between weekdays and weekends. Buses are consistently busier on weekdays, probably due to people’s work schedules, while weekends show more varied bus usage, reflecting more leisure or irregular travel.</p>
+<p><strong>Different Boroughs, Different Patterns</strong>: We know that Staten Island is the Borough with highest load percentage and Trips with APC. While Bronx also have higher Load percentage, it have fewer Trips with APC, which indicates it may not utilize the transportation fully. Queens have the least load percentage, which means we may need to give less resources to Queens, and add resources to Staten Island.</p>
+<p><strong>Relationship</strong>: Because there’s not clear relationship between Load percentage and Trips with APC. Therefore, we should combine both to answer the question of Route optimization and further policy and planning.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -417,7 +610,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Jerryson520/MTA_NYCT.git/edit/main/results.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Jerryson520/MTA_NYCT.git/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    </div>
     <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
