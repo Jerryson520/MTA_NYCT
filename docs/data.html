@@ -182,15 +182,15 @@ ul.task-list li input[type="checkbox"] {
 <p>For the proposed project, we will be utilizing data from <a href="https://data.ny.gov/">data.ny.gov</a>, focusing on the Metropolitan Transportation Authority (MTA) NYC Transport’s historical express bus service data. This data offers insights into the load percentages of bus routes across different directions, boroughs, and times within New York state.</p>
 <p>The data for our research is primarily collected by the Metropolitan Transportation Authority (MTA). It is gathered systematically from the operational systems of the MTA, providing a comprehensive overview of express bus load dynamics. The data set spans from January 2023 to the latest update on October 16, 2023. It is updated monthly and encompasses various dimensions, including load percentages, bus routes, boroughs, and time of the day.</p>
 <p>The data set is reliable due to its comprehensive nature (eight columns) and a large sample size (49,300 data points), which facilitates robust inferences on load trends. We have imported the data as a CSV file, given the compatibility and ease of use of CSV datasets in the R programming environment.</p>
-<p>As of now, no significant issues have been identified with the data set. The primary data source can be accessed at <a href="https://data.ny.gov/en/Transportation/MTA-NYCT-Express-Bus-Capacity-Beginning-2023/4tpr-3bvc">MTA NYC Transport’s Historical Express Bus Service Data</a> on <a href="https://data.ny.gov/">data.ny.gov</a>. In case of updates or revisions, refer to this specific data set page on the website for the most current information.</p>
+<p>As of now, no significant issues have been identified with the data set. The primary data source can be accessed at <a href="https://data.ny.gov/en/Transportation/MTA-NYCT-Express-Bus-Capacity-Beginning-2023/4tpr-3bvc">MTA NYC Transport’s Historical Express Bus Service Data</a> on <a href="https://data.ny.gov/">data.ny.gov</a>. In case of any updates or revisions, we will refer to this specific data set page on the website for the most current information.</p>
 </section>
 <section id="research-plan" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="research-plan"><span class="header-section-number">2.2</span> Research Plan</h2>
-<p>How we explain the questions we put forward in introduction</p>
+<p>How we explain the questions we put forward in introduction?</p>
 <section id="passenger-load-analysis" class="level3" data-number="2.2.1">
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="passenger-load-analysis"><span class="header-section-number">2.2.1</span> Passenger Load Analysis:</h3>
 <ul>
-<li><strong>Data Utilization</strong>: The dataset provides load percentages for each express bus route at their maximum load points. This can be used to identify the most crowded bus stops, routes, and boroughs.</li>
+<li><strong>Data Utilization</strong>: The data set provides load percentages for each express bus route at their maximum load points. This can be used to identify the most crowded bus stops, routes, and boroughs.</li>
 <li><strong>Methodology</strong>: By examining the variation in load percentages over time, you can analyze trends in passenger demand. Comparisons can be made across different routes and stops to determine which are consistently overburdened.</li>
 <li><strong>Outcome</strong>: This analysis will reveal the areas where the bus network is potentially strained, indicating where improvements or adjustments are needed.</li>
 </ul>
@@ -198,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="time-based-trends" class="level3" data-number="2.2.2">
 <h3 data-number="2.2.2" class="anchored" data-anchor-id="time-based-trends"><span class="header-section-number">2.2.2</span> Time-Based Trends:</h3>
 <ul>
-<li><strong>Data Utilization</strong>: Load percentages are broken down by hour and day type (weekday, weekends, holidays). This allows for a granular analysis of usage patterns.</li>
+<li><strong>Data Utilization</strong>: Load percentages are broken down by hour and day type (weekday and weekends). This allows for a granular analysis of usage patterns.</li>
 <li><strong>Methodology</strong>: By plotting these data points, you can identify peak and off-peak usage times. This information can be used to examine how bus utilization fluctuates throughout the day and on different types of days.</li>
 <li><strong>Outcome</strong>: The findings will inform recommendations for optimizing bus schedules and frequencies, ensuring that service availability aligns with passenger demand.</li>
 </ul>
@@ -214,11 +214,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="policy-and-planning-implications" class="level3" data-number="2.2.4">
 <h3 data-number="2.2.4" class="anchored" data-anchor-id="policy-and-planning-implications"><span class="header-section-number">2.2.4</span> Policy and Planning Implications:</h3>
 <ul>
-<li><strong>Data Utilization</strong>: The comprehensive nature of the dataset provides a detailed picture of how the express bus network is currently serving the city.</li>
+<li><strong>Data Utilization</strong>: The comprehensive nature of the data set provides a detailed picture of how the express bus network is currently serving the city.</li>
 <li><strong>Methodology</strong>: By synthesizing the insights from load analysis, time-based trends, and route optimization, you can make informed recommendations for long-term planning and policy decisions.</li>
 <li><strong>Outcome</strong>: The analysis will offer valuable input for city planners and policymakers, guiding them in making decisions about public transportation infrastructure, service improvements, and resource allocation.</li>
 </ul>
-<p>In summary, the dataset’s detailed breakdown of load percentages by route, stop, hour, and day type is instrumental in understanding the dynamics of express bus service utilization in New York City. By meticulously analyzing this data, you can answer critical questions about passenger load, time-based usage trends, route optimization needs, and broader policy implications. This approach will not only address the specific research questions but also contribute to the broader goal of enhancing urban mobility in New York City.</p>
+<p>In summary, the data set’s detailed breakdown of load percentages by route, stop, hour, and day type is instrumental in understanding the dynamics of express bus service utilization in New York City. By meticulously analyzing this data, you can answer critical questions about passenger load, time-based usage trends, route optimization needs, and broader policy implications. This approach will not only address the specific research questions but also contribute to the broader goal of enhancing urban mobility in New York City.</p>
 </section>
 </section>
 <section id="missing-value-analysis" class="level2" data-number="2.3">
@@ -245,9 +245,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="comment" class="level3" data-number="2.3.1">
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="comment"><span class="header-section-number">2.3.1</span> Comment:</h3>
-<p>The 1st figure, titled “Heatmap of Missing Data”, shows a heatmap where the entire area is filled with a single color, indicating the absence of missing values across all columns of the dataset. Each column is represented on the x-axis, and the uniform color suggests that for every column in the dataset, there are no missing (NA) values.</p>
-<p>The 2nd figure, titled “Missing value analysis figure 2”, displays a stacked bar chart with each bar representing a column from the dataset. The bars are filled with a single color, indicating non-missing values. The absence of a second color in each bar which would have represented missing values implies that there are no missing values in any of the columns of the dataset. The count on the y-axis likely represents the total number of non-missing observations for each column.</p>
-<p>Both figures effectively communicate that the dataset is complete with no missing observations for any of the variables presented. This is beneficial for data analysis as it suggests that there may not be a need for imputation strategies, and statistical analyses can proceed without the complication of handling missing data.</p>
+<p>The 1st figure, titled “Heat map of Missing Data”, shows a heat map where the entire area is filled with a single color, indicating the absence of missing values across all columns of the data set. Each column is represented on the x-axis, and the uniform color suggests that for every column in the data set, there are no missing (NA) values.</p>
+<p>The 2nd figure, titled “Missing value analysis figure 2”, displays a stacked bar chart with each bar representing a column from the data set. The bars are filled with a single color, indicating non-missing values. The absence of a second color in each bar which would have represented missing values implies that there are no missing values in any of the columns of the data set. The count on the y-axis likely represents the total number of non-missing observations for each column.</p>
+<p>Both figures effectively communicate that the data set is complete with no missing observations for any of the variables presented. This is beneficial for data analysis as it suggests that there may not be a need for imputation strategies, and statistical analyses can proceed without the complication of handling missing data.</p>
 
 
 </section>
