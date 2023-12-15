@@ -56,20 +56,23 @@ ggplot(bus_load, aes(x = Direction, y = Load.Percentage, fill = Direction)) +
   scale_fill_brewer(palette = "Set1") # Use a color palette for differentiation
 ```
 
-#### **Comment**:
+**Comment**:
 
-**Median Load Percentage**: The median load percentage seems relatively
-different. NB and SB are the first 2 largest Load Percentage while WB
-and EB are 2 smalless, Which indicates North and South may stand more
-passengers while the other 2 direction have lower utilization.
+-   **Median Load Percentage**: The median load percentage seems
+    relatively different. NB and SB are the first 2 largest Load
+    Percentage while WB and EB are 2 smalless, Which indicates North and
+    South may stand more passengers while the other 2 direction have
+    lower utilization.
 
-**Outliers**: All directions seems a lot of outliers, which are not
-taken into calculation consideration, I think we could further explore
-those and remove potential outliers which may influence our results.
+-   **Outliers**: All directions seems a lot of outliers, which are not
+    taken into calculation consideration, I think we could further
+    explore those and remove potential outliers which may influence our
+    results.
 
-**Variation**: By seeing the interquantile of those directions, we can
-see that SB direction have more variation with respect to the load
-percentage, which indicates south direction should be explored further.
+-   **Variation**: By seeing the interquantile of those directions, we
+    can see that SB direction have more variation with respect to the
+    load percentage, which indicates south direction should be explored
+    further.
 
 ### Horizontal barchart: Avg. Load Percentage per Borough
 
@@ -92,12 +95,12 @@ average_load_by_hour_borough |> ggplot(aes(x = fct_reorder(Borough, Average_Load
   coord_flip()
 ```
 
-#### **Comment**:
+**Comment**:
 
-**Average Load**: Staten Island shows the highest average load
-percentage. This could indicate a higher utilization of the
-transportation system, or possibly fewer transportation options leading
-to more crowded buses or trains.
+-   **Average Load**: Staten Island shows the highest average load
+    percentage. This could indicate a higher utilization of the
+    transportation system, or possibly fewer transportation options
+    leading to more crowded buses or trains.
 
 ### Horizontal barchart: Avg. Trips with APC per Borough
 
@@ -120,13 +123,13 @@ average_load_by_hour_borough |> ggplot(aes(x =  fct_reorder(Borough, Average_Tri
   coord_flip()
 ```
 
-#### **Comment**:
+**Comment**:
 
-**Average Trip**: Staten Island stands out with a significantly higher
-average number of trips. This could indicate a higher frequency of trips
-or that fewer routes are being used more frequently. Therefore, we
-should combine with Average load to see it's the bad utilization or we
-should actually increase more routes.
+-   **Average Trip**: Staten Island stands out with a significantly
+    higher average number of trips. This could indicate a higher
+    frequency of trips or that fewer routes are being used more
+    frequently. Therefore, we should combine with Average load to see
+    it's the bad utilization or we should actually increase more routes.
 
 ### Cleveland plot: Avg. Load Percentage per Route
 
@@ -156,18 +159,18 @@ average_load_by_route |>
   guides(color = guide_legend(title = "Borough"))  # Add title to the legend
 ```
 
-#### **Comment**:
+**Comment**:
 
-**Route Load Variation**: There is a wide variation in the average load
-percentages across different routes. Some routes have a low average
-load, while others are approaching 50%, which indicates differences in
-route popularity, capacity, or possibly the time of day the data was
-collected.
+-   **Route Load Variation**: There is a wide variation in the average
+    load percentages across different routes. Some routes have a low
+    average load, while others are approaching 50%, which indicates
+    differences in route popularity, capacity, or possibly the time of
+    day the data was collected.
 
-**Comparison Across Boroughs**: It appears that Staten Island has
-several routes with higher load percentages, while routes in Queens have
-a lower average load. This could reflect differences in transportation
-needs or service levels across boroughs.
+-   **Comparison Across Boroughs**: It appears that Staten Island has
+    several routes with higher load percentages, while routes in Queens
+    have a lower average load. This could reflect differences in
+    transportation needs or service levels across boroughs.
 
 ## **Time-based Trends**
 
@@ -218,21 +221,21 @@ average_load_by_hour |>
             nudge_y = -0.02, size = 4, hjust = 0)
 ```
 
-#### **Comment**:
+**Comment**:
 
-**Peak Times**: There is a clear peak in average load percentage around
-the 8th hour marked as the highest load at 48%, and another small peak
-around 16-17th hour. This likely corresponds to morning rush hour, a
-common time for people to commute to work or school, and the night rush
-hour, a common time for going home after work.
+-   **Peak Times**: There is a clear peak in average load percentage
+    around the 8th hour marked as the highest load at 48%, and another
+    small peak around 16-17th hour. This likely corresponds to morning
+    rush hour, a common time for people to commute to work or school,
+    and the night rush hour, a common time for going home after work.
 
-**Lowest Load**: The graph points out the lowest load percentage at 18%,
-which occurs around the 4th hour, likely in the very early morning when
-the least number of people are traveling.
+-   **Lowest Load**: The graph points out the lowest load percentage at
+    18%, which occurs around the 4th hour, likely in the very early
+    morning when the least number of people are traveling.
 
-**Nighttime Load**: There is an uptick in load percentage later in the
-evening, after the 20th hour, which could correspond to people returning
-home from late shifts or social activities.
+-   **Nighttime Load**: There is an uptick in load percentage later in
+    the evening, after the 20th hour, which could correspond to people
+    returning home from late shifts or social activities.
 
 ### Barchart: Avg. Trips with APC of NYC Bus by Hour
 
@@ -265,24 +268,24 @@ ggplot(average_trips_with_APC_by_hour, aes(x = Hour, y = Average_Trips_with_APC)
   scale_x_continuous(breaks = seq(0, 23, by = 1)) # Assuming 'Hour' ranges from 0 to 23
 ```
 
-#### **Comment**:
+**Comment**:
 
-**Peak Hours**: The chart shows distinct peaks in the number of trips
-during certain hours of the day. The most prominent peak appears to be
-in the morning hours, around 8 AM, suggesting a morning rush hour with
-the highest average number of trips. There's another less pronounced
-peak in the late afternoon or early evening, possibly indicating an
-evening rush hour.
+-   **Peak Hours**: The chart shows distinct peaks in the number of
+    trips during certain hours of the day. The most prominent peak
+    appears to be in the morning hours, around 8 AM, suggesting a
+    morning rush hour with the highest average number of trips. There's
+    another less pronounced peak in the late afternoon or early evening,
+    possibly indicating an evening rush hour.
 
-**Off-Peak Variation**: Outside of the peak hours, the number of trips
-decreases but fluctuates throughout the day. Midday hours show a
-moderate level of trips, which could be due to people traveling for
-non-work related reasons or staggered work schedules.
+-   **Off-Peak Variation**: Outside of the peak hours, the number of
+    trips decreases but fluctuates throughout the day. Midday hours show
+    a moderate level of trips, which could be due to people traveling
+    for non-work related reasons or staggered work schedules.
 
-**Nighttime Service**: There's a noticeable drop in the average number
-of trips late at night, reaching the lowest point in the early morning
-hours around 4 AM to 5 AM, which is expected as this is typically
-outside of standard commuting times.
+-   **Nighttime Service**: There's a noticeable drop in the average
+    number of trips late at night, reaching the lowest point in the
+    early morning hours around 4 AM to 5 AM, which is expected as this
+    is typically outside of standard commuting times.
 
 ### Ridgeline plot: Load Percentage Distribution by Day Type
 
@@ -302,28 +305,29 @@ bus_load |>
   theme_ridges(font_size = 12, grid = TRUE)  # Use the ridges theme with adjusted font size and grid lines
 ```
 
-#### **Comment**:
+**Comment**:
 
-**Distribution Shape**: The distribution of load percentages on weekdays
-has a wider spread than on weekends, suggesting there is more variation
-in bus load percentages during weekdays.
+-   **Distribution Shape**: The distribution of load percentages on
+    weekdays has a wider spread than on weekends, suggesting there is
+    more variation in bus load percentages during weekdays.
 
-**Peaks and Load**: There appear to be multiple peaks for both weekdays
-and weekends. This could indicate that there are specific times during
-the day when buses are consistently more or less loaded. The highest
-peak on weekdays suggests a time when buses are most consistently at a
-similar load percentage, possibly during rush hours.
+-   **Peaks and Load**: There appear to be multiple peaks for both
+    weekdays and weekends. This could indicate that there are specific
+    times during the day when buses are consistently more or less
+    loaded. The highest peak on weekdays suggests a time when buses are
+    most consistently at a similar load percentage, possibly during rush
+    hours.
 
-**Weekday vs. Weekend Trends**: The weekday distribution has a higher
-peak, which might indicate a more consistent pattern of high load
-percentages, likely associated with commuter traffic. The weekend
-distribution is broader with a less pronounced peak, suggesting a more
-varied load percentage, which could be due to a more irregular or
-leisure-based travel pattern.
+-   **Weekday vs. Weekend Trends**: The weekday distribution has a
+    higher peak, which might indicate a more consistent pattern of high
+    load percentages, likely associated with commuter traffic. The
+    weekend distribution is broader with a less pronounced peak,
+    suggesting a more varied load percentage, which could be due to a
+    more irregular or leisure-based travel pattern.
 
-**Bus Utilization**: The graph could suggest that buses are more heavily
-utilized during weekdays as compared to weekends, which would align with
-typical workweek patterns.
+-   **Bus Utilization**: The graph could suggest that buses are more
+    heavily utilized during weekdays as compared to weekends, which
+    would align with typical workweek patterns.
 
 ### Ridgeline plot: Trip with APC Distribution by Day Type
 
@@ -343,29 +347,30 @@ bus_load |>
   theme_ridges(font_size = 12, grid = TRUE)  # Use the ridges theme with adjusted font size and grid lines
 ```
 
-#### **Comment**:
+**Comment**:
 
-**Weekend Peaks**: The distribution for weekends has pronounced peaks,
-especially the very sharp peak at the lower end of the x-axis,
-indicating that there are many instances of a specific, lower number of
-trips (possibly single or very few trips on certain routes). This
-suggests that there's less variability in the number of trips on
-weekends, with certain trip counts being far more common than others.
+-   **Weekend Peaks**: The distribution for weekends has pronounced
+    peaks, especially the very sharp peak at the lower end of the
+    x-axis, indicating that there are many instances of a specific,
+    lower number of trips (possibly single or very few trips on certain
+    routes). This suggests that there's less variability in the number
+    of trips on weekends, with certain trip counts being far more common
+    than others.
 
-**Weekday Distribution**: The weekday distribution is smoother and more
-spread out, which indicates a greater variability in trip counts. This
-could be due to a more uniform distribution of commuter travel spread
-throughout the workday.
+-   **Weekday Distribution**: The weekday distribution is smoother and
+    more spread out, which indicates a greater variability in trip
+    counts. This could be due to a more uniform distribution of commuter
+    travel spread throughout the workday.
 
-**Use of Logarithmic Scale**: By using a logarithmic scale (log2), the
-graph allows for easier visualization and comparison of data across a
-wide range of values. It's especially useful when dealing with
-exponential growth or large disparities in data.
+-   **Use of Logarithmic Scale**: By using a logarithmic scale (log2),
+    the graph allows for easier visualization and comparison of data
+    across a wide range of values. It's especially useful when dealing
+    with exponential growth or large disparities in data.
 
-**Low Trip Counts**: The first peak in the weekend distribution suggests
-that the lowest trip counts are more common on weekends than on
-weekdays. This could be due to reduced service schedules or lower
-demand.
+-   **Low Trip Counts**: The first peak in the weekend distribution
+    suggests that the lowest trip counts are more common on weekends
+    than on weekdays. This could be due to reduced service schedules or
+    lower demand.
 
 ## **Multiple variable Interactions**
 
@@ -391,25 +396,26 @@ average_load_by_hour_borough |>
   )
 ```
 
-#### **Comment**:
+**Comment**:
 
-**Variability**: Each borough exhibits variability in load percentages
-throughout the day. This could be reflective of different travel
-patterns, with peaks likely corresponding to rush hours.
+-   **Variability**: Each borough exhibits variability in load
+    percentages throughout the day. This could be reflective of
+    different travel patterns, with peaks likely corresponding to rush
+    hours.
 
-**Peak Times**: Bronx: Shows pronounced peaks, which could suggest rush
-hours are more pronounced in the Bronx, with higher bus usage during
-these times.
+-   **Peak Times**: Bronx: Shows pronounced peaks, which could suggest
+    rush hours are more pronounced in the Bronx, with higher bus usage
+    during these times.
 
-**Brooklyn**: Exhibits a more even distribution with less pronounced
-peaks, possibly indicating a more steady usage of buses throughout the
-day.
+-   **Brooklyn**: Exhibits a more even distribution with less pronounced
+    peaks, possibly indicating a more steady usage of buses throughout
+    the day.
 
-**Queens**: Similar to the Bronx, there are distinct peaks that may
-correspond to rush hours.
+-   **Queens**: Similar to the Bronx, there are distinct peaks that may
+    correspond to rush hours.
 
-**Staten Island**: Has a more varied pattern with multiple peaks,
-suggesting several busy periods throughout the day.
+-   **Staten Island**: Has a more varied pattern with multiple peaks,
+    suggesting several busy periods throughout the day.
 
 ### Scatterplot: Correlation between Load Percentage and Trips
 
@@ -429,17 +435,17 @@ p <- ggplot(sample, aes(x = Load.Percentage, y = Trips.with.APC, text = Borough)
 ggplotly(p, tooltip = "text")
 ```
 
-#### **Comment**:
+**Comment**:
 
-**Data Distribution**: A scatter plot with a lot of data points
-clustered at the lower end of the load percentage axis might suggest
-that most bus trips have a low to moderate load percentage. But the
-correlation relationship is not so apparent.
+-   **Data Distribution**: A scatter plot with a lot of data points
+    clustered at the lower end of the load percentage axis might suggest
+    that most bus trips have a low to moderate load percentage. But the
+    correlation relationship is not so apparent.
 
-**Outliers**: There are points scattered more widely along the y-axis at
-higher load percentages (representing the Staten Island Borough), these
-could be considered outliers indicating occasional trips with
-significantly higher load percentages.
+-   **Outliers**: There are points scattered more widely along the
+    y-axis at higher load percentages (representing the Staten Island
+    Borough), these could be considered outliers indicating occasional
+    trips with significantly higher load percentages.
 
 ### Stacked bar chart: Direction composition of each borough
 
@@ -465,53 +471,54 @@ bus_load |>
   )
 ```
 
-#### **Comment**:
+**Comment**:
 
-**Graph distribution**: From the graph, we know that only Brooklyn has 4
-directions of routes, while Bronx and Staten Island have only North and
-South direction. Queens has only East and West. According to previous
-graphs, it indicates that North and South have higher load percentages.
-This is fit for that Bronx and Staten Island have higher load percentage
-while Queens has lower percentage.
+-   **Graph distribution**: From the graph, we know that only Brooklyn
+    has 4 directions of routes, while Bronx and Staten Island have only
+    North and South direction. Queens has only East and West. According
+    to previous graphs, it indicates that North and South have higher
+    load percentages. This is fit for that Bronx and Staten Island have
+    higher load percentage while Queens has lower percentage.
 
 ## **Non-technical summary**:
 
-**Busyness by Time and Place**: Some graphs showed how busy the buses
-are at different times of the day in various boroughs. For example,
-there are times in the morning and evening when the buses are
-particularly full, likely when people are going to or from work.
+-   **Busyness by Time and Place**: Some graphs showed how busy the
+    buses are at different times of the day in various boroughs. For
+    example, there are times in the morning and evening when the buses
+    are particularly full, likely when people are going to or from work.
 
-**Direction Matters**: Other charts indicated that in some boroughs,
-buses going in certain directions are busier than others. This might
-tell us where more people work or live, or maybe where popular
-destinations are.
+-   **Direction Matters**: Other charts indicated that in some boroughs,
+    buses going in certain directions are busier than others. This might
+    tell us where more people work or live, or maybe where popular
+    destinations are.
 
-**Weekdays vs. Weekends**: There's also a difference between weekdays
-and weekends. Buses are consistently busier on weekdays, probably due to
-people's work schedules, while weekends show more varied bus usage,
-reflecting more leisure or irregular travel.
+-   **Weekdays vs. Weekends**: There's also a difference between
+    weekdays and weekends. Buses are consistently busier on weekdays,
+    probably due to people's work schedules, while weekends show more
+    varied bus usage, reflecting more leisure or irregular travel.
 
-**Different Boroughs, Different Patterns**: We know that Staten Island
-is the Borough with highest load percentage and Trips with APC. While
-Bronx also have higher Load percentage, it have fewer Trips with APC,
-which indicates it may not utilize the transportation fully. Queens have
-the least load percentage, which means we may need to give less
-resources to Queens, and add resources to Staten Island.
+-   **Different Boroughs, Different Patterns**: We know that Staten
+    Island is the Borough with highest load percentage and Trips with
+    APC. While Bronx also have higher Load percentage, it have fewer
+    Trips with APC, which indicates it may not utilize the
+    transportation fully. Queens have the least load percentage, which
+    means we may need to give less resources to Queens, and add
+    resources to Staten Island.
 
-**Relationship**: Because there's not clear relationship between Load
-percentage and Trips with APC. Therefore, we should combine both to
-answer the question of Route optimization and further policy and
-planning.
-
+-   **Relationship**: Because there's not clear relationship between
+    Load percentage and Trips with APC. Therefore, we should combine
+    both to answer the question of Route optimization and further policy
+    and planning.
 
 ## References:
-  
-**1** https://stackoverflow.com/questions/41940439/display-multiple-d3-js-charts-in-a-single-html-page
 
-**2** https://datawanderings.com/2019/11/01/tutorial-making-an-interactive-line-chart-in-d3-js-v-5/
+**1.**
+https://stackoverflow.com/questions/41940439/display-multiple-d3-js-charts-in-a-single-html-page
 
-**3** https://d3-graph-gallery.com/graph/interactivity_button.html
+**2.**
+https://datawanderings.com/2019/11/01/tutorial-making-an-interactive-line-chart-in-d3-js-v-5/
 
-**4** https://forum.freecodecamp.org/t/d3-tooltip-cant-access-data-shows-undefined/440547
+**3.** https://d3-graph-gallery.com/graph/interactivity_button.html
 
-
+**4.**
+https://forum.freecodecamp.org/t/d3-tooltip-cant-access-data-shows-undefined/440547
