@@ -1,1 +1,21 @@
 # Conclusion
+
+## Key Findings
+
+**Passenger Load Analysis**: Weekdays show higher bus loads than weekends, with Staten Island exhibiting the highest average load. This suggests a disparity in service utilization across boroughs.
+
+**Time-Based Trends**: Morning and evening rush hours are peak times across all boroughs, indicating a need for optimized bus schedules during these periods.
+
+**Route Optimization**: Northbound and Southbound routes are busier, suggesting a higher demand in these directions. Adjusting resources and schedules for these routes could improve service efficiency.
+
+**Policy Implications**: The variations in bus usage across boroughs and times indicate a need for borough-specific transportation strategies and flexible policy-making.
+
+## Limitations and Future Directions
+
+The study is limited to express buses and a specific time frame, not accounting for other transit modes or long-term trends.
+
+Future research could integrate multi-modal data and analyze the impact of external factors like weather or policy changes.
+
+## Conclusion
+
+This analysis provides essential insights into the utilization of express bus services in NYC, highlighting the importance of tailored approaches to meet diverse borough needs and peak time demands. These findings can inform future urban planning and policy decisions.
