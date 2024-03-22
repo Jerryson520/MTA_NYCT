@@ -1,7 +1,7 @@
-# MTA NYCT Express Bus Capacity spanning from (01/01/2023 - 10/16/2023)
+# MTA NYCT Express Bus Capacity
 Exploratory Data Analysis and Visualization Project
 
-This project focuses on exploring and visualizing the load percentage for each express bus route at its maximum load point, categorized by direction, hour, and day type (weekday, weekends, and holidays), aggregated by week.
+This project focuses on exploring and visualizing the load percentage for each express bus route at its maximum load point, categorized by direction, hour, and day type (weekday, weekends, and holidays), aggregated by week. The dataset spans from (01/01/2023 - 10/16/2023)
 
 ## Dataset Link:
 [MTA NYCT Express Bus Capacity Dataset](https://catalog.data.gov/dataset/mta-nyct-express-bus-capacity-beginning-2023)
